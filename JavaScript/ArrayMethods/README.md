@@ -163,3 +163,16 @@ const newArr = arr.map(x => x * 2);
 
 console.log(newArr);   // [2, 4, 6]
 ```
+
+<br />
+
+## filter()
+
+創建一個新陣列，其結果是滿足條件的所有元素。
+
+```
+const arr = [1, 2, 3, 4];
+const filteredArr = arr.filter(x => x > 2);
+
+console.log(filteredArr);   // [3, 4]
+```
