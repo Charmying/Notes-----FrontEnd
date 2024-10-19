@@ -150,3 +150,16 @@ arr.forEach(element => {
 // 2
 // 3
 ```
+
+<br />
+
+## map()
+
+創建一個新陣列，其元素是調用函式處理每個元素後的結果。
+
+```
+const arr = [1, 2, 3];
+const newArr = arr.map(x => x * 2);
+
+console.log(newArr);   // [2, 4, 6]
+```
