@@ -176,3 +176,16 @@ const filteredArr = arr.filter(x => x > 2);
 
 console.log(filteredArr);   // [3, 4]
 ```
+
+<br />
+
+## find()
+
+返回符合條件的第一個元素，否則返回 undefined。
+
+```
+const arr = [1, 2, 3, 4];
+const found = arr.find(x => x > 2);
+
+console.log(found);  // 3
+```
