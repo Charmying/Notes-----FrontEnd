@@ -189,3 +189,16 @@ const found = arr.find(x => x > 2);
 
 console.log(found);  // 3
 ```
+
+<br />
+
+## findIndex()
+
+返回符合條件的第一個元素的索引，否則返回 -1。
+
+```
+const arr = [1, 2, 3, 4];
+const index = arr.findIndex(x => x > 2);
+
+console.log(index);   // 2
+```
