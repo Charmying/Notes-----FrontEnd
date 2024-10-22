@@ -202,3 +202,16 @@ const index = arr.findIndex(x => x > 2);
 
 console.log(index);   // 2
 ```
+
+<br />
+
+## includes()
+
+判斷陣列是否包含某個值，返回布林值。
+
+```
+const arr = [1, 2, 3];
+
+console.log(arr.includes(2));   // true
+console.log(arr.includes(4));   // false
+```
