@@ -215,3 +215,16 @@ const arr = [1, 2, 3];
 console.log(arr.includes(2));   // true
 console.log(arr.includes(4));   // false
 ```
+
+<br />
+
+## indexOf()
+
+返回指定元素在陣列中的第一個索引，若未找到則返回 -1。
+
+```
+const arr = [1, 2, 3, 2];
+
+console.log(arr.indexOf(2));   // 1
+console.log(arr.indexOf(4));   // -1
+```
