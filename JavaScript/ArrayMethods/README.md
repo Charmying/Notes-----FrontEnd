@@ -241,3 +241,16 @@ const arr = [1, 2, 3, 2];
 console.log(arr.lastIndexOf(2));   // 3
 console.log(arr.lastIndexOf(4));   // -1
 ```
+
+<br />
+
+## some()
+
+判斷陣列中是否至少有一個元素滿足條件，返回布林值。
+
+```
+const arr = [1, 2, 3];
+const hasEven = arr.some(x => x % 2 === 0);
+
+console.log(hasEven);   // true
+```
