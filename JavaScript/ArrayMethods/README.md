@@ -254,3 +254,16 @@ const hasEven = arr.some(x => x % 2 === 0);
 
 console.log(hasEven);   // true
 ```
+
+<br />
+
+## every()
+
+判斷陣列中的所有元素是否都滿足條件，返回布林值。
+
+```
+const arr = [1, 2, 3];
+const allPositive = arr.every(x => x > 0);
+
+console.log(allPositive);   // true
+```
