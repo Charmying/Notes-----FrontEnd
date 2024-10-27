@@ -267,3 +267,16 @@ const allPositive = arr.every(x => x > 0);
 
 console.log(allPositive);   // true
 ```
+
+<br />
+
+## reverse()
+
+反轉陣列中元素的順序。
+
+```
+const arr = [1, 2, 3];
+arr.reverse();
+
+console.log(arr);   // [3, 2, 1]
+```
