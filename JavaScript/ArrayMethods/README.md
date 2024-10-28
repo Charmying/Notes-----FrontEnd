@@ -280,3 +280,16 @@ arr.reverse();
 
 console.log(arr);   // [3, 2, 1]
 ```
+
+<br />
+
+## sort()
+
+對陣列中的元素進行排序。
+
+```
+const arr = [3, 1, 2];
+arr.sort();
+
+console.log(arr);   // [1, 2, 3]
+```
