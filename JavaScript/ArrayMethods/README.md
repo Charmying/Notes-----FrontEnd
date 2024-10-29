@@ -293,3 +293,16 @@ arr.sort();
 
 console.log(arr);   // [1, 2, 3]
 ```
+
+<br />
+
+## fill()
+
+用靜態值填充陣列中的元素。
+
+```
+const arr = [1, 2, 3];
+arr.fill(0);
+
+console.log(arr);   // [0, 0, 0]
+```
