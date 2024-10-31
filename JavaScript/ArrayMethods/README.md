@@ -306,3 +306,16 @@ arr.fill(0);
 
 console.log(arr);   // [0, 0, 0]
 ```
+
+<br />
+
+## flat()
+
+將多維陣列展平成一維陣列。
+
+```
+const arr = [1, [2, 3], [4, [5]]];
+const flatArr = arr.flat(2);
+
+console.log(flatArr);   // [1, 2, 3, 4, 5]
+```
