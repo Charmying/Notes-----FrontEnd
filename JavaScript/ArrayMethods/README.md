@@ -319,3 +319,16 @@ const flatArr = arr.flat(2);
 
 console.log(flatArr);   // [1, 2, 3, 4, 5]
 ```
+
+<br />
+
+## flatMap()
+
+先對陣列進行 map 操作，再將結果展平成一維陣列。
+
+```
+const arr = [1, 2, 3];
+const flatMappedArr = arr.flatMap(x => [x, x * 2]);
+
+console.log(flatMappedArr);   // [1, 2, 2, 4, 3, 6]
+```
