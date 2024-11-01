@@ -332,3 +332,14 @@ const flatMappedArr = arr.flatMap(x => [x, x * 2]);
 
 console.log(flatMappedArr);   // [1, 2, 2, 4, 3, 6]
 ```
+
+<br />
+
+## isArray()
+
+檢查給定的值是否為陣列，返回布林值。
+
+```
+console.log(Array.isArray([1, 2, 3]));   // true
+console.log(Array.isArray('Hello'));   // false
+```
