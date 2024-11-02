@@ -343,3 +343,16 @@ console.log(flatMappedArr);   // [1, 2, 2, 4, 3, 6]
 console.log(Array.isArray([1, 2, 3]));   // true
 console.log(Array.isArray('Hello'));   // false
 ```
+
+<br />
+
+## from()
+
+將類陣列物件或可迭代物件轉換為陣列。
+
+```
+const str = 'Hello';
+const arr = Array.from(str);
+
+console.log(arr);   // ['H', 'e', 'l', 'l', 'o']
+```
