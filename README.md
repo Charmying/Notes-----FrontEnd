@@ -31,3 +31,5 @@
 `2024-09-28` [關於 NVM 的使用](https://github.com/Charmying/Notes-FrontEnd/issues/13)
 
 `2024-10-13` [By Value 和 By Reference 的差別](https://github.com/Charmying/Notes-FrontEnd/issues/14)
+
+`2024-10-13` [setTimeout 和 setInterval 的差別](https://github.com/Charmying/Notes-FrontEnd/issues/15)
