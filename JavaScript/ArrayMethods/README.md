@@ -356,3 +356,21 @@ const arr = Array.from(str);
 
 console.log(arr);   // ['H', 'e', 'l', 'l', 'o']
 ```
+
+<br />
+
+## entries()
+
+返回一個新的陣列迭代器物件，包含鍵值對 (key-value pair)。
+
+```
+const arr = ['a', 'b', 'c'];
+const iterator = arr.entries();
+for (let [index, value] of iterator) {
+  console.log(index, value);
+}
+
+// 0 'a'
+// 0 'a'
+// 2 'c'
+```
