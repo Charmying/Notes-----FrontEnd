@@ -374,3 +374,21 @@ for (let [index, value] of iterator) {
 // 0 'a'
 // 2 'c'
 ```
+
+<br />
+
+## keys()
+
+返回一個新的陣列迭代器物件，包含每個索引。
+
+```
+const arr = ['a', 'b', 'c'];
+const iterator = arr.keys();
+for (let key of iterator) {
+  console.log(key);
+}
+
+// 0
+// 1
+// 2
+```
