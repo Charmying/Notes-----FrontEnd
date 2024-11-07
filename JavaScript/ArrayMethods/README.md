@@ -392,3 +392,15 @@ for (let key of iterator) {
 // 1
 // 2
 ```
+
+<br />
+
+## valueOf()
+
+返回陣列的原始值 (通常與陣列本身相同)。
+
+```
+const arr = [1, 2, 3];
+
+console.log(arr.valueOf());   // [1, 2, 3]
+```
