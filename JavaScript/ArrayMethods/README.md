@@ -404,3 +404,16 @@ const arr = [1, 2, 3];
 
 console.log(arr.valueOf());   // [1, 2, 3]
 ```
+
+<br />
+
+## copyWithin()
+
+在陣列內部複製元素到其他位置 (會修改原陣列)。
+
+```
+const arr = [1, 2, 3, 4, 5];
+arr.copyWithin(0, 3, 5);
+
+console.log(arr);   // [4, 5, 3, 4, 5]
+```
