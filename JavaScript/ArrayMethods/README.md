@@ -430,3 +430,16 @@ const sum = arr.reduce((acc, curr) => acc + curr, 0);
 
 console.log(sum);   // 10
 ```
+
+<br />
+
+## reduceRight()
+
+從右到左對陣列中的元素進行累積，最終為單一值。
+
+```
+const arr = [1, 2, 3, 4];
+const product = arr.reduceRight((acc, curr) => acc * curr, 1);
+
+console.log(product);   // 24
+```
