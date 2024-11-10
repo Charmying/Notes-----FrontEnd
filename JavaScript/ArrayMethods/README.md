@@ -417,3 +417,16 @@ arr.copyWithin(0, 3, 5);
 
 console.log(arr);   // [4, 5, 3, 4, 5]
 ```
+
+<br />
+
+## reduce()
+
+將陣列中的每個元素依次累積，最終為單一值。
+
+```
+const arr = [1, 2, 3, 4];
+const sum = arr.reduce((acc, curr) => acc + curr, 0);
+
+console.log(sum);   // 10
+```
