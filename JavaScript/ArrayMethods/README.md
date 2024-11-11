@@ -443,3 +443,16 @@ const product = arr.reduceRight((acc, curr) => acc * curr, 1);
 
 console.log(product);   // 24
 ```
+
+<br />
+
+## delete 運算符
+
+刪除陣列中的某個元素，但不會改變陣列的長度，會留下 empty。
+
+```
+const arr = [1, 2, 3];
+delete arr[1];
+
+console.log(arr);   // [1, empty, 3]
+```
