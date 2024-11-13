@@ -33,3 +33,5 @@
 `2024-10-13` [By Value 和 By Reference 的差別](https://github.com/Charmying/Notes-FrontEnd/issues/14)
 
 `2024-11-05` [setTimeout 和 setInterval 的差別](https://github.com/Charmying/Notes-FrontEnd/issues/15)
+
+`2024-11-14` [淺拷貝 (Shallow Copy) 和 深拷貝 (Deep Copy)](https://github.com/Charmying/Notes-FrontEnd/issues/16)
