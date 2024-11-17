@@ -24,3 +24,24 @@
 
     console.log(obj.name);   // Charmy
     ```
+
+### enumerable (列舉)
+
+- enumerable 指的是 property 是否可以在迴圈 (例如：for...in) 中被遍歷出來。
+
+- 當 property 的 enumerable 設為 true 時，這個 property 就會在迴圈中被列舉出來。
+
+- 若設為 false，則這個 property 不會被 for...in 等迴圈列出。
+
+    ```
+    let obj = {};
+
+    Object.defineProperty(obj, 'hidden', {
+        value: 'secret',
+        enumerable: false
+    });
+
+    for (let key in obj) {
+        console.log(key);   // 不會輸出 'hidden'
+    }
+    ```
