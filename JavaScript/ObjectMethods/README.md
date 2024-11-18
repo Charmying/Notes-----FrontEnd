@@ -45,3 +45,23 @@
         console.log(key);   // 不會輸出 'hidden'
     }
     ```
+
+### writable (修改)
+
+- writable 指的是 property 的值是否可以被重新賦值。
+
+- 當 property 的 writable 設為 true 時，就可以修改該 property 的值。
+
+- 若設為 false，則該 property 的值是唯讀的，無法被改變。
+
+    ```
+    let person = {};
+
+    Object.defineProperty(person, 'name', {
+        value: 'Charmy',
+        writable: false
+    });
+
+    person.name = 'Tina';   // 嘗試修改值，但不會成功
+    console.log(person.name);   // Charmy
+    ```
