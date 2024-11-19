@@ -65,3 +65,23 @@
     person.name = 'Tina';   // 嘗試修改值，但不會成功
     console.log(person.name);   // Charmy
     ```
+
+### configurable (刪除)
+
+- configurable 指的是 property 是否可以被刪除或重新定義。
+
+- 當 property 的 configurable 設為 true 時，就可以使用 delete 運算子刪除這個 property，或者重新定義屬性描述符。
+
+- 若設為 false，則無法刪除該 property，也無法修改屬性設定。
+
+    ```
+    let member = {};
+
+    Object.defineProperty(member, 'name', {
+        value: 'Charmy',
+        configurable: false
+    });
+
+    delete member.name;   // 嘗試刪除 name，但不會成功
+    console.log(member.name);   // Charmy
+    ```
