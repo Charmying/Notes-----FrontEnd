@@ -85,3 +85,69 @@
     delete member.name;   // 嘗試刪除 name，但不會成功
     console.log(member.name);   // Charmy
     ```
+
+### get 和 set
+
+- get 和 set 屬性用來定義 getter 和 setter 函式，讓 property 可以透過存取器 (accessor) 方法來取得或設定值。
+
+- 這兩個方法提供了更靈活的方式來控制 property 的讀取和賦值行為。
+
+    get
+
+    - get 是一個函式，當讀取 property 的值時會被呼叫。
+
+    - 如果沒有設定 get，則預設值為 undefined。
+
+        ```
+        let person = {
+            firstName: 'Charmy',
+            lastName: 'Tseng'
+        };
+
+        Object.defineProperty(person, 'fullName', {
+            get: function() {
+                return this.firstName + ' ' + this.lastName;
+            }
+        });
+
+        console.log(person.fullName);   // Charmy Tseng
+        ```
+
+    set
+
+    - set 是一個函式，當設定 property 的值時會被呼叫。
+
+    - 如果沒有設定 set，則預設值為 undefined。
+
+        ```
+        let person = {
+            firstName: 'Charmy',
+            lastName: 'Tseng'
+        };
+
+        Object.defineProperty(person, 'fullName', {
+            set: function(name) {
+                let parts = name.split(' ');
+                this.firstName = parts[0];
+                this.lastName = parts[1];
+            }
+        });
+
+        person.fullName = 'Tina Ho';
+
+        console.log(person.firstName);   // Tina
+        console.log(person.lastName);   // Ho
+        ```
+
+    當使用 get 和 set 屬性時，不能同時使用 value、writable 屬性。如果 get 或 set 其中一個被設定，value 和 writable 就會被忽略。
+
+    ```
+    let obj = {};
+
+    Object.defineProperty(obj, 'number', {
+        value: 10,
+        get: function() { return 20; }
+    });
+
+    console.log(obj.number);   // 產生報錯，因為同時設定了 `value` 和 `get`
+    ```
