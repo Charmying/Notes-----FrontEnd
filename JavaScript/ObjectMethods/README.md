@@ -151,3 +151,49 @@
 
     console.log(obj.number);   // 產生報錯，因為同時設定了 `value` 和 `get`
     ```
+
+<br />
+
+## `Object.defineProperty()`
+
+`Object.defineProperty()` 是可以用來精確新增或修改物件中 property 的方法。透過這個方法可以定義 property 的屬性，像是能否被列舉 (enumerable)、能否被修改 (writable)、以及能否被刪除 (configurable)。這樣能更細緻的操控物件。
+
+基本語法：
+
+```
+Object.defineProperty(obj, prop, descriptor)
+```
+
+- obj：想要新增或修改 property 的物件。
+
+- prop：想要定義或修改的 property 名稱 (key 值)。
+
+- descriptor：用來描述 property 行為的物件
+
+    - value：property 的值，預設是 undefined。
+
+    - enumerable：設定 property 是否可以被列舉，預設是 false。
+
+    - writable：設定 property 是否可以被修改，預設是 false。
+
+    - configurable：設定 property 是否可以被刪除或再次修改描述符，預設是 false。
+
+    - get 和 set：定義 getter 和 setter 方法，讓 property 的值可以透過存取器方法來取得或設定。
+
+範例：
+
+```
+let person = {};
+
+Object.defineProperty(person, 'name', {
+    value: 'Charmy',
+    writable: false,
+    enumerable: true,
+    configurable: false
+});
+
+console.log(person.name);   // Charmy
+
+person.name = 'Tina';   // 嘗試修改 name 但不會成功，因為 writable 是 false
+console.log(person.name);   // Charmy
+```
