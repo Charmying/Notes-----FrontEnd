@@ -197,3 +197,55 @@ console.log(person.name);   // Charmy
 person.name = 'Tina';   // 嘗試修改 name 但不會成功，因為 writable 是 false
 console.log(person.name);   // Charmy
 ```
+
+## `Object.defineProperties()`
+
+`Object.defineProperties()` 是用來一次定義或修改多個物件屬性的靜態方法。`Object.defineProperties()` 可以更細緻控制屬性的描述符，例如：可寫性 (writable)、可列舉性 (enumerable) 和可配置性 (configurable)，並且可以同時設定多個屬性。
+
+基本語法：
+
+```
+Object.defineProperties(obj, props)
+```
+
+- obj：想要定義或修改屬性的目標物件。
+
+- props：一個物件，包含要定義或修改的屬性及其描述符。
+
+範例：
+
+```
+const person = {};
+
+Object.defineProperties(person, {
+    name: {
+    	value: 'Charmy',
+    	writable: true,
+    	enumerable: true,
+    	configurable: true
+    },
+    age: {
+    	value: 27,
+    	writable: false,
+    	enumerable: true,
+    	configurable: false
+    }
+});
+
+console.log(person.name);   // Charmy
+console.log(person.age);   // 27
+
+person.name = 'Tina';   // 修改成功
+console.log(person.name);   // Tina
+
+person.age = 100;   // 修改失敗，age 仍然是 27
+console.log(person.age);   // 27
+
+delete person.name;   // 刪除成功
+console.log(person.name);   // undefined
+
+delete person.age;   // 刪除失敗，因為 age 的 configurable 設定為 false
+console.log(person.age);   // 27
+```
+
+在這個範例中，使用 `Object.defineProperties()` 來定義 person 物件的兩個屬性 name 和 age。name 是可寫的，而 age 則是不可寫的，這樣就可以在不影響物件結構的情況下，精細控制各個屬性的行為。
