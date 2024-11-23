@@ -249,3 +249,27 @@ console.log(person.age);   // 27
 ```
 
 在這個範例中，使用 `Object.defineProperties()` 來定義 person 物件的兩個屬性 name 和 age。name 是可寫的，而 age 則是不可寫的，這樣就可以在不影響物件結構的情況下，精細控制各個屬性的行為。
+
+### 應用場景
+
+- 定義多個屬性：當需要一次性定義或修改多個屬性時，使用 `Object.defineProperties()` 可以提高效率，讓程式碼更簡潔。
+
+- 控制屬性行為：如果需要對屬性的可寫性、可列舉性和可配置性進行精細控制，這個方法非常合適。
+
+- 創建不可變物件：可以用來創建具有特定屬性設置的物件，特別是在需要維護某些屬性不被修改或刪除的情況下。
+
+### 注意事項
+
+- 描述符必須正確：當定義屬性時，必須提供正確的描述符屬性 (例如：value、writable、enumerable 和 configurable)。如果缺少必要的屬性，會導致錯誤。
+
+- 不能定義已有屬性：如果嘗試用 `Object.defineProperties()` 定義已經存在的屬性，但沒有提供 `configurable: true` 的描述符，則會拋出錯誤。
+
+- 物件必須可擴展：在使用此方法之前，確保物件沒有被封閉或凍結，否則會無法新增屬性。
+
+### 與 `Object.defineProperty()` 的區別
+
+`Object.defineProperty()` 用來定義或修改單一屬性，而 `Object.defineProperties()` 可以同時處理多個屬性。
+
+### 總結
+
+`Object.defineProperties()` 是一個功能強大的方法，能夠一次性定義多個屬性並精確控制其行為。當需要對物件的屬性進行細緻的管理時，這個方法可以更有效達成目標。
