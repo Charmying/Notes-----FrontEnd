@@ -273,3 +273,65 @@ console.log(person.age);   // 27
 ### 總結
 
 `Object.defineProperties()` 是一個功能強大的方法，能夠一次性定義多個屬性並精確控制其行為。當需要對物件的屬性進行細緻的管理時，這個方法可以更有效達成目標。
+
+<br />
+
+## `Object.hasOwnProperty()`
+
+`Object.hasOwnProperty()` 是用來檢查物件是否擁有指定名稱 (key) 的自身 property 的方法，也就是說，`Object.hasOwnProperty()` 會判斷該 property 是否存在於物件本身，而不是從原型鏈 (prototype chain) 繼承而來的。
+
+`Object.hasOwnProperty()` 可以幫助在遍歷物件的時候，避免意外存取到繼承自原型的 property。
+
+基本語法：
+
+```
+obj.hasOwnProperty(prop)
+```
+
+- obj：想要檢查的物件。
+
+- prop：想要檢查的 property 名稱 (key)，必須是字串或符號 (symbol)。
+
+範例：
+
+```
+const person = {
+    name: 'Charmy',
+    age: 27
+};
+
+console.log(person.hasOwnProperty('name'));   // true
+console.log(person.hasOwnProperty('toString'));   // false
+```
+
+在這個範例中，`person.hasOwnProperty('name')` 回傳 true 是因為 name 是 person 物件自身的 property，而 `person.hasOwnProperty('toString')` 回傳 false 是因為 toString 是從 Object 原型繼承而來的 property，不是 person 自身的。
+
+### 注意事項
+
+- `hasOwnProperty()` 只會檢查物件自身的 property，不會檢查原型鏈上的 property。
+
+- 在遍歷物件的時候，例如：使用 for...in 迴圈，通常會搭配 `hasOwnProperty()` 來確保只操作物件自身的 property，而不會誤操作到繼承的 property。
+
+    搭配 for...in 迴圈範例：
+
+    ```
+    const person = {
+        name: 'Charmy',
+        age: 27
+    };
+
+    for (let key in person) {
+        if (person.hasOwnProperty(key)) {
+            console.log(key + ': ' + person[key]);
+        }
+    }
+
+	// name: Charmy
+	// age: 27
+    ```
+
+    在這個範例中，使用 for...in 迴圈遍歷 person 物件，並搭配 `hasOwnProperty()` 來確保只列出 person 自身的 property。
+
+### 總結
+
+`Object.hasOwnProperty()` 在需要確認物件中是否包含特定 property，或者在遍歷物件時避免操作到繼承的 property。
