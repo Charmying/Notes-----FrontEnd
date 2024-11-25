@@ -335,3 +335,94 @@ console.log(person.hasOwnProperty('toString'));   // false
 ### 總結
 
 `Object.hasOwnProperty()` 在需要確認物件中是否包含特定 property，或者在遍歷物件時避免操作到繼承的 property。
+
+<br />
+
+## `Object.getOwnPropertyDescriptor()`
+
+`Object.getOwnPropertyDescriptor()` 是用來取得物件上指定 property 的描述符 (descriptor) 的靜態方法。透過這個方法可以瞭解物件 property 的特性，例如：value、是否可列舉 (enumerable)、是否可寫入 (writable)、是否可設定 (configurable)，以及 getter 和 setter 函式。
+
+基本語法：
+
+```
+Object.getOwnPropertyDescriptor(obj, prop)
+```
+
+- obj：想要取得 property 描述符的物件。
+
+- prop：想要查詢的 property 名稱 (key)，必須是字串或符號 (symbol)。
+
+範例：
+
+```
+const person = {
+    name: 'Charmy',
+    age: 27
+};
+
+const descriptor = Object.getOwnPropertyDescriptor(person, 'name');
+console.log(descriptor);
+// {
+//     "value": "Charmy",
+//     "writable": true,
+//     "enumerable": true,
+//     "configurable": true
+// }
+```
+
+在這個範例中，使用 `Object.getOwnPropertyDescriptor()` 取得了 person 物件中 name property 的描述符。這個描述符是一個物件，包含了 name property 的所有特性。
+
+### 描述符內容
+
+`Object.getOwnPropertyDescriptor()` 回傳的描述符物件可以包含以下屬性
+
+- value：property 的值。
+
+- writable：布林值，表示 property 的值是否可以被修改。
+
+- enumerable：布林值，表示 property 是否可以在迴圈中被列舉出來。
+
+- configurable：布林值，表示 property 是否可以被刪除或重新定義。
+
+- get：一個函式，作為 property 的 getter，在讀取該 property 時會被呼叫。
+
+- set：一個函式，作為 property 的 setter，在設定該 property 時會被呼叫。
+
+    getter 和 setter 範例
+
+    ```
+	const person = {
+	    firstName: 'Charmy',
+	    lastName: 'Tseng',
+	    get fullName() {
+	        return `${this.firstName} ${this.lastName}`;
+	    }
+	};
+	
+	const descriptor = Object.getOwnPropertyDescriptor(person, 'fullName');
+	console.log(descriptor);
+	// {
+	//     configurable:  true
+	//     enumerable : true
+	//     get: ƒ fullName()
+	//     set : undefined
+	// }
+	```
+	
+	在這個範例中，取得了 person 物件中 fullName property 的描述符，可以看到包含了 get 函式，並且 set 是 undefined，表示沒有設定 setter。
+
+### 注意事項
+
+- `Object.getOwnPropertyDescriptor()` 只會回傳物件自身的 property 描述符，不會查詢原型鏈上的 property。
+
+- 如果指定的 property 不存在於物件中，則會回傳 undefined。
+
+### 用途
+
+- 可以用來檢查物件 property 的特性，例如：在進行物件封裝或操作 property 時確認可寫入性或可列舉性。
+
+- 在進行物件的深度操作時，結合 `Object.defineProperty()` 來修改物件 property 的特性
+
+### 總結
+
+`Object.getOwnPropertyDescriptor()` 可以更深入地瞭解物件中 property 的特性，適合用在需要精確控制或檢查物件 property 的情況。
