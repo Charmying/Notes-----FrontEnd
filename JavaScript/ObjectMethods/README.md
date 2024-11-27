@@ -426,3 +426,54 @@ console.log(descriptor);
 ### 總結
 
 `Object.getOwnPropertyDescriptor()` 可以更深入瞭解物件中 property 的特性，適合用在需要精確控制或檢查物件 property 的情況。
+
+<br />
+
+## `Object.getOwnPropertyDescriptors()`
+
+`Object.getOwnPropertyDescriptors()` 是一個用來取得物件所有自身 property 的描述符 (descriptor) 的靜態方法。`Object.getOwnPropertyDescriptors()` 會回傳一個包含每個 property 描述符的物件，這樣可以獲取所有 property 的細節。
+
+`Object.getOwnPropertyDescriptors()` 與 `Object.getOwnPropertyDescriptor()` 類似，但後者只能針對單一 property，而 `Object.getOwnPropertyDescriptors()` 則能一次取回全部自身 property 的描述符。
+
+基本語法：
+
+```
+Object.getOwnPropertyDescriptors(obj)
+```
+
+- obj：想要取得 property 描述符的目標物件。
+
+範例：
+
+```
+const person = {
+    name: 'Charmy',
+    age: 27,
+    get fullName() {
+        return `${this.name} Tseng`;
+    }
+};
+
+const descriptors = Object.getOwnPropertyDescriptors(person);
+console.log(descriptors);
+// {
+//     "name": {
+//         "value": "Charmy",
+//         "writable": true,
+//         "enumerable": true,
+//         "configurable": true
+//     },
+//     "age": {
+//         "value": 27,
+//         "writable": true,
+//         "enumerable": true,
+//         "configurable": true
+//     },
+//     "fullName": {
+//         "enumerable": true,
+//         "configurable": true
+//     }
+//  }
+```
+
+在這個範例中，使用 `Object.getOwnPropertyDescriptors()` 來取得 person 物件所有自身 property 的描述符，包含 name、age 和 fullName。每個 property 的特性 (例如：writable、enumerable、configurable) 都在描述符中詳細列出。
