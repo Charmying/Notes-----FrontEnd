@@ -425,4 +425,4 @@ console.log(descriptor);
 
 ### 總結
 
-`Object.getOwnPropertyDescriptor()` 可以更深入地瞭解物件中 property 的特性，適合用在需要精確控制或檢查物件 property 的情況。
+`Object.getOwnPropertyDescriptor()` 可以更深入瞭解物件中 property 的特性，適合用在需要精確控制或檢查物件 property 的情況。
