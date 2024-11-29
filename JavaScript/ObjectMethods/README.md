@@ -477,3 +477,40 @@ console.log(descriptors);
 ```
 
 在這個範例中，使用 `Object.getOwnPropertyDescriptors()` 來取得 person 物件所有自身 property 的描述符，包含 name、age 和 fullName。每個 property 的特性 (例如：writable、enumerable、configurable) 都在描述符中詳細列出。
+
+### 描述符內容
+
+`Object.getOwnPropertyDescriptors()` 回傳的每個 property 描述符，可能包含以下屬性
+
+- value：property 的值。
+
+- writable：布林值，表示 property 的值是否可被修改。
+
+- enumerable：布林值，表示 property 是否可被迴圈列舉。
+
+- configurable：布林值，表示 property 是否可被刪除或重新定義。
+
+- get：property 的 getter 函式（如果有的話）。
+
+- set：property 的 setter 函式（如果有的話）。
+
+### 注意事項
+
+- `Object.getOwnPropertyDescriptors()` 只會回傳物件自身的 property 描述符，不會包含繼承自原型鏈的 property。
+
+- 如果某個 property 沒有描述符，該 property 不會出現在回傳的物件中。
+
+### 用途
+
+通常用於結合 `Object.defineProperties()`，當想要複製或 clone 物件時，保留原物件的 property 特性很重要。`Object.getOwnPropertyDescriptors()` 可以精確取得每個 property 的描述符，然後通過 `Object.defineProperties()` 設置在新物件上。
+
+用於物件複製的範例
+
+```
+const clone = Object.defineProperties({}, Object.getOwnPropertyDescriptors(person));
+console.log(clone);   // 與 `person` 物件相同的屬性與屬性特性
+```
+
+### 總結
+
+`Object.getOwnPropertyDescriptors()` 是用來檢視和操作物件所有自身的 property 描述符的方法，尤其在進行物件 clone 或需要複製物件特性，可以讓物件操作變得更加精確。
