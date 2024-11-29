@@ -514,3 +514,49 @@ console.log(clone);   // 與 `person` 物件相同的屬性與屬性特性
 ### 總結
 
 `Object.getOwnPropertyDescriptors()` 是用來檢視和操作物件所有自身的 property 描述符的方法，尤其在進行物件 clone 或需要複製物件特性，可以讓物件操作變得更加精確。
+
+<br />
+
+## `Object.getPrototypeOf()`
+
+`Object.getPrototypeOf()` 是一個用來取得指定物件的原型 (prototype) 的靜態方法。原型是指物件繼承的方法和屬性所在的物件，這是 JavaScript 繼承機制的基礎。如果物件是透過某個構造函數 (constructor) 或使用 `Object.create()` 建立的，Object.getPrototypeOf() 就能回傳該物件的原型。
+
+基本語法：
+
+```
+Object.getPrototypeOf(obj)
+```
+
+- obj：想要查詢原型的物件。
+
+範例：
+
+```
+const person = {
+    greet() {
+        console.log('Hello!');
+    }
+};
+
+const student = Object.create(person);
+console.log(Object.getPrototypeOf(student) === person);   // true
+```
+
+在這個範例中，使用 `Object.create(person)` 建立了 student 物件，並且繼承了 person 的原型。透過 `Object.getPrototypeOf(student)` 可以確認 student 的原型是否為 person。
+
+### 常見用途
+
+- 確認物件的原型：可以用來檢查某個物件是否繼承自另一個物件，特別是在進行物件設計時有助於確認繼承鏈。
+
+- 繼承控制：了解物件的原型可以更清楚掌握物件在原型鏈上的行為，確保繼承的功能正確。
+
+### 注意事項
+
+- 如果傳入的是一個使用 `Object.create(null)` 創建的物件，那麼 `Object.getPrototypeOf()` 會回傳 null，因為這類物件沒有原型。
+
+    ```
+    const obj = Object.create(null);
+    console.log(Object.getPrototypeOf(obj));   // null
+    ```
+
+- 對於標準物件，`Object.getPrototypeOf()` 會回傳該物件的內部 [[Prototype]]。如果物件是透過類別 (class) 或建構子 (constructor) 建立的，那原型會是 constructor.prototype。
