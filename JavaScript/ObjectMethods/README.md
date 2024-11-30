@@ -560,3 +560,17 @@ console.log(Object.getPrototypeOf(student) === person);   // true
     ```
 
 - 對於標準物件，`Object.getPrototypeOf()` 會回傳該物件的內部 [[Prototype]]。如果物件是透過類別 (class) 或建構子 (constructor) 建立的，那原型會是 constructor.prototype。
+
+### 與 `__proto__` 的區別
+
+在 JavaScript 中，`__proto__` 也是一種可以直接存取物件的原型。但這是一個非標準的方式，且不推薦在現代 JavaScript 中使用。相比之下，`Object.getPrototypeOf()` 是標準且更安全的選擇。
+
+### 應用場景
+
+- 繼承判斷：假設在調試階段想知道某個物件的繼承關係，可以使用 Object.getPrototypeOf() 來快速確認物件的原型。
+
+- 優化性能：瞭解物件原型有助於掌握物件的屬性和方法是從哪裡繼承而來。
+
+### 總結
+
+`Object.getPrototypeOf()` 是一個非常實用的工具，能夠在處理 JavaScript 的原型繼承時檢視和操作物件的繼承結構。
