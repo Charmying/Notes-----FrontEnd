@@ -574,3 +574,44 @@ console.log(Object.getPrototypeOf(student) === person);   // true
 ### 總結
 
 `Object.getPrototypeOf()` 是一個非常實用的工具，能夠在處理 JavaScript 的原型繼承時檢視和操作物件的繼承結構。
+
+<br />
+
+## `Object.setPrototypeOf()`
+
+`Object.setPrototypeOf()` 是一個用來設定指定物件的原型 (prototype) 的靜態方法。透過這個方法可以動態修改物件的原型，進而改變物件的繼承鏈和其行為。物件的原型決定了能夠繼承哪些屬性和方法，因此 `
+Object.setPrototypeOf()` 可以更靈活控制物件的繼承關係。
+
+基本語法：
+
+```
+Object.setPrototypeOf(obj, proto)
+```
+
+- obj：想要修改原型的目標物件。
+
+- proto：作為新原型的物件。如果傳入 null，那麼物件將不再有任何原型。
+
+範例：
+
+```
+const animal = {
+    speak() {
+        console.log('Animal makes a sound.');
+    }
+};
+
+const dog = {
+    bark() {
+        console.log('Dog barks.');
+    }
+};
+
+// 將 dog 的原型設為 animal，讓 dog 繼承 animal 的屬性和方法
+Object.setPrototypeOf(dog, animal);
+
+dog.bark();   // Dog barks.
+dog.speak();   // Animal makes a sound.
+```
+
+在這個範例中，使用 `Object.setPrototypeOf()` 將 dog 的原型設置為 animal，因此 dog 不僅可以使用自己的 bark 方法，還可以繼承並使用 animal 的 speak 方法。
