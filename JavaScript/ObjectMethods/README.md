@@ -615,3 +615,55 @@ dog.speak();   // Animal makes a sound.
 ```
 
 在這個範例中，使用 `Object.setPrototypeOf()` 將 dog 的原型設置為 animal，因此 dog 不僅可以使用自己的 bark 方法，還可以繼承並使用 animal 的 speak 方法。
+
+### 注意事項
+
+- 性能影響：頻繁使用 `Object.setPrototypeOf()` 來修改物件的原型會對性能造成影響，特別是在高效能要求的應用程式中，因為這會破壞 JavaScript 引擎對物件的優化。通常在創建物件時就應該確定好原型，而非在運行時頻繁修改。
+
+- 設為 null 的後果：如果將一個物件的原型設為 null，那麼該物件將不會繼承任何來自 `Object.prototype` 的屬性和方法，例如：toString() 或 hasOwnProperty()。
+
+    範例
+
+    ```
+    const obj = {};
+    Object.setPrototypeOf(obj, null);
+    console.log(obj.toString);   // undefined
+    ```
+
+- 不推薦在物件上反覆更改原型：最好在物件創建時通過 `Object.create()` 指定原型，而不是後期使用 `Object.setPrototypeOf()` 進行修改，這樣可以保持程式碼的清晰和效能。
+
+### 常見用途
+
+- 動態改變繼承鏈：在某些情況下，可能需要根據不同的需求動態改變物件的繼承鏈，這時就可以使用 `Object.setPrototypeOf()`。例如：可能需要讓一個物件在執行過程中具備不同的行為或屬性。
+
+- 模擬繼承行為：如果想要實現類似於傳統物件導向中的繼承機制，使用 `Object.setPrototypeOf()` 可以讓物件繼承另一個物件的屬性和方法，達到模擬類別繼承的效果。
+
+    動態更改原型的範例
+
+    ```
+    const car = {
+        drive() {
+            console.log('Car is driving.');
+        }
+    };
+
+    const airplane = {
+        fly() {
+            console.log('Airplane is flying.');
+        }
+    };
+
+    const vehicle = {};
+
+    Object.setPrototypeOf(vehicle, car);
+    vehicle.drive();   // Car is driving.
+
+    Object.setPrototypeOf(vehicle, airplane);
+    vehicle.fly();   // Airplane is flying.
+    ```
+
+    在這個範例中，動態改變了 vehicle 的原型，先繼承 car，後來又繼承 airplane，使其行為發生了變化。
+
+### 總結
+
+`Object.setPrototypeOf()` 能夠靈活設定或更改物件的原型，進而影響該物件的繼承關係和行為。雖然這個方法非常強大，但由於會對性能造成影響，應在必要時使用，並避免頻繁修改物件的原型。
