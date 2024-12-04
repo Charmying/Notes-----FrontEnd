@@ -667,3 +667,33 @@ dog.speak();   // Animal makes a sound.
 ### 總結
 
 `Object.setPrototypeOf()` 能夠靈活設定或更改物件的原型，進而影響該物件的繼承關係和行為。雖然這個方法非常強大，但由於會對性能造成影響，應在必要時使用，並避免頻繁修改物件的原型。
+
+<br />
+
+## `Object.prototype.toString()`
+
+`Object.prototype.toString()` 是 JavaScript 中每個物件都有的預設方法，這個方法會回傳一個表示物件類型的字串。`Object.prototype.toString()` 是用來檢查物件的具體類型的，特別是當需要精確區分物件類型時 (例如：區分陣列、日期、正規表達式等)，會比 typeof 更加準確。
+
+基本語法：
+
+```
+obj.toString()
+```
+
+- obj：想要檢查的物件。
+
+預設情況下，當直接呼叫物件的 `toString()` 方法時，會回傳類似 [object Object] 這樣的字串，表示這是一個普通的物件。但如果物件是其他內建類型，像是陣列或日期，結果會有所不同。
+
+範例：
+
+```
+const obj = {};
+console.log(obj.toString());    // [object Object]
+
+const arr = [];
+console.log(arr.toString());    // 空白，因為 Array 的 toString() 會輸出元素
+
+console.log(Object.prototype.toString.call(arr));    // [object Array]，精確顯示陣列類型
+```
+
+在這個範例中，使用了 `Object.prototype.toString.call()` 來精確檢查 arr 是陣列類型。這是因為陣列的 toString() 方法被重寫了，會輸出其元素而不是物件類型，而透過 `Object.prototype.toString.call()` 可以得到具體的物件類型。
