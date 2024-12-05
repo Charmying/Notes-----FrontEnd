@@ -697,3 +697,39 @@ console.log(Object.prototype.toString.call(arr));    // [object Array]，精確�
 ```
 
 在這個範例中，使用了 `Object.prototype.toString.call()` 來精確檢查 arr 是陣列類型。這是因為陣列的 toString() 方法被重寫了，會輸出其元素而不是物件類型，而透過 `Object.prototype.toString.call()` 可以得到具體的物件類型。
+
+### 應用場景
+
+- 檢查物件類型：`Object.prototype.toString()` 可以用來精確檢查物件的具體類型，特別是當 typeof 不夠準確時，例如：區分 Array、Date、RegExp 等特殊物件。
+
+    ```
+    console.log(Object.prototype.toString.call([]));   // [object Array]
+    console.log(Object.prototype.toString.call(new Date()));   // [object Date]
+    console.log(Object.prototype.toString.call(/regex/));   // [object RegExp]
+    ```
+
+- 解決 typeof 的局限：typeof 對於某些物件類型會返回不準確的結果，例如：陣列和物件都會被判斷為 object，而 `Object.prototype.toString()` 則能提供精確的類型資訊。
+
+    ```
+    console.log(typeof []);   // object
+    console.log(Object.prototype.toString.call([]));   // [object Array]
+    ```
+
+- 自訂物件類型：可以自訂物件的 `toString()` 行為，使其回傳特定的類型資訊。
+
+    ```
+    const person = {
+        name: 'Charmy',
+        toString: function() {
+            return '[object Person]';
+        }
+    };
+
+    console.log(person.toString());   // [object Person]
+    ```
+
+### 注意事項
+
+- 需使用 `call()` 或 `apply()`：當想檢查物件的具體類型時，應使用 `Object.prototype.toString.call(obj)`，而不是直接呼叫物件的 `toString()` 方法，這是因為某些內建物件 (例如：陣列) 已經重寫了這個方法。
+
+- 不適合檢查基本數據類型：`Object.prototype.toString()` 更適合用來檢查物件類型，對於基本數據類型 (例如：number, string) 則不常用到，因為 typeof 對基本數據類型已經足夠。
