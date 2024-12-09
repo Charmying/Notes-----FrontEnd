@@ -733,3 +733,35 @@ console.log(Object.prototype.toString.call(arr));    // [object Array]，精確�
 - 需使用 `call()` 或 `apply()`：當想檢查物件的具體類型時，應使用 `Object.prototype.toString.call(obj)`，而不是直接呼叫物件的 `toString()` 方法，這是因為某些內建物件 (例如：陣列) 已經重寫了這個方法。
 
 - 不適合檢查基本數據類型：`Object.prototype.toString()` 更適合用來檢查物件類型，對於基本數據類型 (例如：number, string) 則不常用到，因為 typeof 對基本數據類型已經足夠。
+
+<br />
+
+## `Object.keys()`
+
+`Object.keys()` 是用來取得物件中所有可列舉 (enumerable) 
+的靜態方法。`Object.keys()` 會回傳一個包含物件自身所有可列舉 property 名稱 (key 值) 的陣列，這些 key 值是以字串的形式存在。
+
+`Object.keys()` 只會取得物件本身的 property，不會包含從原型鏈 (prototype chain) 繼承而來的 property。
+
+基本語法：
+
+```
+Object.keys(obj)
+```
+
+- obj：想要取得 key 值的物件。
+
+範例：
+
+```
+const person = {
+    name: 'Charmy',
+    age: 27,
+    city: 'Taichung'
+};
+
+const keys = Object.keys(person);
+console.log(keys);   // ['name', 'age', 'city']
+```
+
+在這個範例中，Object.keys(person) 回傳了一個陣列，包含了 person 物件中所有可列舉的 key 值。
