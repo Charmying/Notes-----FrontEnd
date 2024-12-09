@@ -765,3 +765,15 @@ console.log(keys);   // ['name', 'age', 'city']
 ```
 
 在這個範例中，Object.keys(person) 回傳了一個陣列，包含了 person 物件中所有可列舉的 key 值。
+
+### 注意事項
+
+- `Object.keys()` 只會回傳物件自身的可列舉 property，不包含從原型繼承的 property。
+
+- 只會包含 enumerable 設定為 true 的 property。
+
+- 回傳的 key 值順序與在物件中定義的順序一致。
+
+### 總結
+
+Object.keys() 在許多情況下都很實用，尤其是在想要遍歷一個物件，或者只是想知道物件中有哪些 property 時。
