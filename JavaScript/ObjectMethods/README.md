@@ -777,3 +777,34 @@ console.log(keys);   // ['name', 'age', 'city']
 ### 總結
 
 Object.keys() 在許多情況下都很實用，尤其是在想要遍歷一個物件，或者只是想知道物件中有哪些 property 時。
+
+<br />
+
+## `Object.values()`
+
+`Object.values()` 是用來取得物件中所有 property 值 (value 值) 的靜態方法。`Object.values()` 會回傳一個包含物件自身所有可列舉 value 值的陣列。
+
+`Object.values()` 只會取得物件本身的 value 值，不會包含從原型鏈 (prototype chain) 繼承而來的 property。
+
+基本語法：
+
+```
+Object.values(obj)
+```
+
+- obj：想要取得 value 值的物件。
+
+範例：
+
+```
+const person = {
+    name: 'Charmy',
+    age: 27,
+    city: 'Taichung'
+};
+
+const values = Object.values(person);
+console.log(values);   // ['Charmy', 27, 'Taichung']
+```
+
+在這個範例中，Object.values(person) 回傳了一個陣列，包含了 person 物件中所有可列舉的 value 值。
