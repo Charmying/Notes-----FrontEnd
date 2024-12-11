@@ -808,3 +808,13 @@ console.log(values);   // ['Charmy', 27, 'Taichung']
 ```
 
 在這個範例中，Object.values(person) 回傳了一個陣列，包含了 person 物件中所有可列舉的 value 值。
+
+### 注意事項
+
+- `Object.values()` 只會回傳物件自身的可列舉 value 值，不包含從原型繼承的 property。
+
+- 回傳的 value 值的順序與物件中定義的順序一致。
+
+### 總結
+
+`Object.values()` 在需要處理物件的值或進行某些基於值的操作時會非常方便。
