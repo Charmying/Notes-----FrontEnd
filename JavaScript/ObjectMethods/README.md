@@ -818,3 +818,33 @@ console.log(values);   // ['Charmy', 27, 'Taichung']
 ### 總結
 
 `Object.values()` 在需要處理物件的值或進行某些基於值的操作時會非常方便。
+
+<br />
+
+## `Object.entries()`
+
+`Object.entries()` 是用來取得物件中所有可列舉 (enumerable) property 的鍵值對 (key-value pairs) 的靜態方法。`Object.entries()` 會回傳一個二維陣列 (array of arrays)，每個子陣列包含兩個元素：第一個元素是 property 的名稱 (key)，第二個元素是 property 的值 (value)。
+
+
+基本語法：
+
+```
+Object.entries(obj)
+```
+
+- obj：想要取得鍵值對的物件。
+
+範例：
+
+```
+const person = {
+  name: 'Alice',
+  age: 30,
+  city: 'Taipei'
+};
+
+const entries = Object.entries(person);
+console.log(entries);   // [['name', 'Alice'], ['age', 30], ['city', 'Taipei']]
+```
+
+在這個範例中，`Object.entries(person)` 回傳了一個二維陣列，其中每個子陣列包含 person 物件中每個可列舉 property 的 key 和 value。
