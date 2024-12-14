@@ -848,3 +848,13 @@ console.log(entries);   // [['name', 'Alice'], ['age', 30], ['city', 'Taipei']]
 ```
 
 在這個範例中，`Object.entries(person)` 回傳了一個二維陣列，其中每個子陣列包含 person 物件中每個可列舉 property 的 key 和 value。
+
+### 注意事項
+
+- `Object.entries()` 只會回傳物件自身的可列舉 property，不包含從原型繼承的 property。
+
+- 回傳的鍵值對順序與物件中定義的順序一致。
+
+### 總結
+
+`Object.entries()` 在想要遍歷物件的 key 和 value，或者想要將物件轉換為其他資料結構時。`Object.entries()` 能夠輕鬆處理物件的鍵值對，方便進行迴圈操作。
