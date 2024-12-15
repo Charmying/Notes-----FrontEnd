@@ -858,3 +858,28 @@ console.log(entries);   // [['name', 'Alice'], ['age', 30], ['city', 'Taipei']]
 ### 總結
 
 `Object.entries()` 在想要遍歷物件的 key 和 value，或者想要將物件轉換為其他資料結構時。`Object.entries()` 能夠輕鬆處理物件的鍵值對，方便進行迴圈操作。
+
+<br />
+
+## `Object.fromEntries()`
+
+`Object.fromEntries()` 是一個將鍵值對 (key-value pairs) 的陣列轉換成物件的靜態方法。當有一個由 [key, value] 形式的陣列組成的資料結構時，可以使用 `Object.fromEntries()` 將其轉換成物件，這個物件的屬性即為那些鍵值對。
+
+基本語法：
+
+```
+Object.fromEntries(iterable)
+```
+
+- iterable：一個可迭代的資料結構，通常是由鍵值對 (例如：陣列) 組成的結構，例如：Map 或二維陣列。
+
+範例：
+
+```
+const entries = [['name', 'Charmy'], ['age', 27], ['city', 'Taichung']];
+
+const obj = Object.fromEntries(entries);
+console.log(obj);   // { name: 'Alice', age: 30, city: 'Taipei' }
+```
+
+在這個範例中，entries 是一個二維陣列，每個子陣列都是一個鍵值對。透過 `Object.fromEntries()`，這些鍵值對被轉換成一個物件，物件中的屬性 name、age 和 city 對應到原陣列中的鍵值對。
