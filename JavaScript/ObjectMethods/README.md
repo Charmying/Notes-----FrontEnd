@@ -883,3 +883,40 @@ console.log(obj);   // { name: 'Alice', age: 30, city: 'Taipei' }
 ```
 
 在這個範例中，entries 是一個二維陣列，每個子陣列都是一個鍵值對。透過 `Object.fromEntries()`，這些鍵值對被轉換成一個物件，物件中的屬性 name、age 和 city 對應到原陣列中的鍵值對。
+
+### 應用場景
+
+- 將 Map 轉換為物件：`Object.fromEntries()` 將 Map 資料結構轉換為普通物件。
+
+    ```
+    const map = new Map([['name', 'Charmy'], ['age', 27]]);
+    onst obj = Object.fromEntries(map);
+    console.log(obj);   // {name: 'Charmy', age: 27}
+    ```
+
+- 資料轉換：從某些 API 獲得的資料是陣列形式，需要將其轉換為物件時，就可以使用 `Object.fromEntries()`。
+
+- 反轉 `Object.entries()`：`Object.entries()` 可以將物件轉換為鍵值對陣列，而 `Object.fromEntries()` 則是將這個過程反轉，將鍵值對陣列再轉換回物件。
+
+    ```
+    const obj = { name: 'Charmy', age: 27 };
+    const entries = Object.entries(obj);
+    const newObj = Object.fromEntries(entries);
+    console.log(newObj);   // {name: 'Charmy', age: 27}
+    ```
+
+### 注意事項
+
+- 無法處理重複鍵：如果鍵值對陣列中有重複的鍵，後面出現的鍵值對會覆蓋前面的值。
+
+    ```
+    const entries = [['name', 'Charmy'], ['name', 'Tina']];
+    const obj = Object.fromEntries(entries);
+    console.log(obj);   // {name: 'Tina'}
+    ```
+
+- 輸入格式必須正確：`Object.fromEntries()` 需要傳入的資料是鍵值對形式的可迭代結構，否則會報錯。
+
+### 總結
+
+`Object.fromEntries()` 適合將鍵值對陣列或 Map 結構轉換成物件，特別適合用在將資料從一種結構轉換為物件的情境下。`Object.fromEntries()` 能讓程式更加靈活，也能更輕鬆處理各種鍵值對資料。
