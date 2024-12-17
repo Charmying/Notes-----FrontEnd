@@ -920,3 +920,15 @@ console.log(obj);   // { name: 'Alice', age: 30, city: 'Taipei' }
 ### 總結
 
 `Object.fromEntries()` 適合將鍵值對陣列或 Map 結構轉換成物件，特別適合用在將資料從一種結構轉換為物件的情境下。`Object.fromEntries()` 能讓程式更加靈活，也能更輕鬆處理各種鍵值對資料。
+
+<br />
+
+## `Object.assign()`
+
+`Object.assign()` 是用來將一個或多個來源物件 (source objects) 的所有可列舉 (enumerable) property 複製到目標物件 (target object) 的靜態方法。`Object.assign()` 會修改並回傳目標物件，使其可以輕鬆合併多個物件或拷貝物件的 property。
+
+基本語法：
+
+```
+Object.assign(target, ...sources)
+```
