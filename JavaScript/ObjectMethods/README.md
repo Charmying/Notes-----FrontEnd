@@ -932,3 +932,16 @@ console.log(obj);   // { name: 'Alice', age: 30, city: 'Taipei' }
 ```
 Object.assign(target, ...sources)
 ```
+
+範例：
+
+```
+const target = { name: 'Charmy' };
+const source = { age: 27, city: 'Taichung' };
+
+const result = Object.assign(target, source);
+console.log(result);   // {name: 'Charmy', age: 27, city: 'Taichung'}
+console.log(target);   // {name: 'Charmy', age: 27, city: 'Taichung'}
+```
+
+在這個範例中，`Object.assign()` 將 source 物件中的所有 property 複製到 target 物件，並回傳修改後的 target 物件。
