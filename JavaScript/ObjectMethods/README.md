@@ -945,3 +945,27 @@ console.log(target);   // {name: 'Charmy', age: 27, city: 'Taichung'}
 ```
 
 在這個範例中，`Object.assign()` 將 source 物件中的所有 property 複製到 target 物件，並回傳修改後的 target 物件。
+
+### 注意事項
+
+- `Object.assign()` 是淺拷貝 (shallow copy)，也就是說，如果來源物件中的 property 是物件或陣列等複雜資料類型，那麼拷貝的是引用，而不是值。
+
+- 如果目標物件中已經存在與來源物件相同的 property 名稱 (key)，來源物件的 property 會覆蓋目標物件中的 property。
+
+- 如果有多個來源物件具有相同的 property 名稱 (key)，靠後的來源物件會覆蓋靠前的。
+
+    淺拷貝範例：
+    
+    ```
+    const target = { name: 'Charmy', details: { age: 27 } };
+    const source = { details: { city: 'Taichung' } };
+
+    Object.assign(target, source);
+    console.log(target);   // {"name": "Charmy", "details": {"city": "Taichung"}}
+    ```
+
+    在這個範例中，因為 `Object.assign() 是淺拷貝`，所以 details 這個物件的引用會被覆蓋，而不是合併。
+
+### 總結
+
+`Object.assign()` 是一個強大的方法，在需要合併物件、拷貝物件屬性，或為物件新增新的屬性時非常有用。
