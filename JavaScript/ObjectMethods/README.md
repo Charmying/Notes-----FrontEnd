@@ -985,3 +985,27 @@ Object.is(value1, value2)
 - value1：第一個要比較的值。
 
 - pvalue2：第二個要比較的值。
+
+範例：
+
+```
+console.log(Object.is('hello', 'hello'));   // true
+console.log(Object.is('hello', 'Hello'));   // false
+console.log(Object.is({}, {}));   // false（不同的物件實例）
+console.log(Object.is([], []));   // false（不同的陣列實例）
+console.log(Object.is(NaN, NaN));   // true
+console.log(Object.is('', ''));   // true
+console.log(Object.is(1, 1));   // true
+console.log(Object.is(0, 0));   // true
+console.log(Object.is(0, -0));   // false
+console.log(Object.is(+0, -0));   // false
+console.log(Object.is(-0, -0));   // true
+```
+
+### `Object.is()` 與 `===` 的差異
+
+`Object.is()` 與嚴格相等運算子 `===` 很相似，但有兩個特殊情況 `Object.is()` 與 `===` 不同
+
+- NaN 比較： `===` 判斷 `NaN === NaN` 為 false，但 `Object.is(NaN, NaN)` 會回傳 true。
+
+- - 0 與 -0： `===` 判斷 `0 === -0` 為 true，但 `Object.is(0, -0)` 會回傳 false。
