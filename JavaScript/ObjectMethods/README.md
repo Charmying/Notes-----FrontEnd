@@ -969,3 +969,19 @@ console.log(target);   // {name: 'Charmy', age: 27, city: 'Taichung'}
 ### 總結
 
 `Object.assign()` 是一個強大的方法，在需要合併物件、拷貝物件屬性，或為物件新增新的屬性時非常有用。
+
+<br />
+
+## `Object.is()`
+
+`Object.is()` 是用來比較兩個值是否完全相等的靜態方法。`Object.is()` 的比較方式與嚴格相等運算子 `===` 類似，但在處理一些特殊情況時，`Object.is()` 有更嚴格的判斷標準。
+
+基本語法：
+
+```
+Object.is(value1, value2)
+```
+
+- value1：第一個要比較的值。
+
+- pvalue2：第二個要比較的值。
