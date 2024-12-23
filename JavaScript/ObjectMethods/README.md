@@ -1009,3 +1009,13 @@ console.log(Object.is(-0, -0));   // true
 - NaN 比較： `===` 判斷 `NaN === NaN` 為 false，但 `Object.is(NaN, NaN)` 會回傳 true。
 
 - 0 與 -0： `===` 判斷 `0 === -0` 為 true，但 `Object.is(0, -0)` 會回傳 false。
+
+### 注意事項
+
+- `Object.is()` 主要用於需要嚴格比較的情況，特別是在需要區分 NaN 或正負零的場合。
+
+- 對於其他一般情況，`Object.is()` 與 `===` 的行為基本一致。
+
+### 總結
+
+`Object.is()` 是一個更精確的比較方法，特別適合用在需要區分 NaN、正零和負零的場合。
