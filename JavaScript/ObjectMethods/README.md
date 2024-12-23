@@ -1008,4 +1008,4 @@ console.log(Object.is(-0, -0));   // true
 
 - NaN 比較： `===` 判斷 `NaN === NaN` 為 false，但 `Object.is(NaN, NaN)` 會回傳 true。
 
-- - 0 與 -0： `===` 判斷 `0 === -0` 為 true，但 `Object.is(0, -0)` 會回傳 false。
+- 0 與 -0： `===` 判斷 `0 === -0` 為 true，但 `Object.is(0, -0)` 會回傳 false。
