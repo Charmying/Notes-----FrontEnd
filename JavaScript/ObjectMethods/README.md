@@ -1019,3 +1019,19 @@ console.log(Object.is(-0, -0));   // true
 ### 總結
 
 `Object.is()` 是一個更精確的比較方法，特別適合用在需要區分 NaN、正零和負零的場合。
+
+<br />
+
+## `Object.create()`
+
+`Object.create()` 是用來建立新物件的靜態方法。這個新物件的原型 (prototype) 可以自己指定，並且可以在建立時直接添加新的 property。透過 `Object.create()` 可以更靈活控制物件的繼承關係，特別是在需要建立具有特定原型的物件時。
+
+基本語法：
+
+```
+Object.create(proto, propertiesObject)
+```
+
+- proto：新物件的原型，可以是另一個物件或 null。如果傳入 null，新物件將不會繼承任何東西。
+
+- propertiesObject (可選)：一個用來定義新物件 property 的物件。這個物件的格式與 `Object.defineProperties()` 所使用的格式相同，可以設定 property 的描述符 (descriptor)。
