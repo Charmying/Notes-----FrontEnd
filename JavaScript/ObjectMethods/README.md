@@ -1053,3 +1053,27 @@ console.log(member.name);   // Charmy
 ```
 
 在這個範例中，使用 `Object.create(person)` 建立了一個新物件 member，並將 person 設為原型。由於 member 繼承自 person，因此可以呼叫 person 的 greet 方法。
+
+### 使用 `propertiesObject`
+
+```
+const person = {
+    greet() {
+        console.log('Hello!');
+    }
+};
+
+const member = Object.create(person, {
+    name: {
+        value: 'Charmy',
+        writable: true,
+        enumerable: true,
+        configurable: true
+    }
+});
+
+console.log(member.name);   // Charmy
+member.greet();   // Hello!
+```
+
+在這個範例中，使用 `propertiesObject` 參數來定義 member 的 name property，並指定描述符，這樣可以更精確控制 name property 的行為。
