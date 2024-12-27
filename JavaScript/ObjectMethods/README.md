@@ -1035,3 +1035,21 @@ Object.create(proto, propertiesObject)
 - proto：新物件的原型，可以是另一個物件或 null。如果傳入 null，新物件將不會繼承任何東西。
 
 - propertiesObject (可選)：一個用來定義新物件 property 的物件。這個物件的格式與 `Object.defineProperties()` 所使用的格式相同，可以設定 property 的描述符 (descriptor)。
+
+範例：
+
+```
+const person = {
+    greet() {
+        console.log('Hello!');
+    }
+};
+
+const member = Object.create(person);
+member.name = 'Charmy';
+
+member.greet();   // Hello!
+console.log(member.name);   // Charmy
+```
+
+在這個範例中，使用 `Object.create(person)` 建立了一個新物件 member，並將 person 設為原型。由於 member 繼承自 person，因此可以呼叫 person 的 greet 方法。
