@@ -1077,3 +1077,19 @@ member.greet();   // Hello!
 ```
 
 在這個範例中，使用 `propertiesObject` 參數來定義 member 的 name property，並指定描述符，這樣可以更精確控制 name property 的行為。
+
+### 注意事項
+
+- 如果 proto 傳入 null，新物件將沒有原型，因此不會繼承任何來自 Object 的方法，例如：`toString()`。
+
+- `Object.create()` 提供了一種更加直接和清晰的方式來設定物件的原型，相比於使用建構子函式 (constructor function) 來說更為簡單。
+
+### 應用場景
+
+- 使用 `Object.create()` 可以用來建立物件之間的繼承關係，並且在建立物件時可以精確定義 property。
+
+- 適合用於需要定制化物件原型的情況，例如：實作原型繼承 (prototypal inheritance)。
+
+### 總結
+
+`Object.create()` 可以精確控制物件的繼承結構，同時也可以在建立物件時設定其屬性。
