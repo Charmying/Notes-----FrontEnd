@@ -1093,3 +1093,19 @@ member.greet();   // Hello!
 ### 總結
 
 `Object.create()` 可以精確控制物件的繼承結構，同時也可以在建立物件時設定其屬性。
+
+<br />
+
+## `Object.preventExtensions()`
+
+`Object.preventExtensions()` 是一個用來阻止物件擴展的靜態方法，也就是說，對一個物件使用 `Object.preventExtensions()` 之後就無法再向該物件添加新的屬性。已經存在的屬性仍然可以修改或刪除，但不能再新增屬性。。
+
+基本語法：
+
+```
+Object.preventExtensions(obj)
+```
+
+- obj：想要阻止擴展的物件。
+
+這個方法會直接修改傳入的物件，使其無法再擴展，並且回傳該物件。
