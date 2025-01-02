@@ -1109,3 +1109,24 @@ Object.preventExtensions(obj)
 - obj：想要阻止擴展的物件。
 
 這個方法會直接修改傳入的物件，使其無法再擴展，並且回傳該物件。
+
+範例：
+
+```
+const person = {
+    name: 'Charmy'
+};
+
+Object.preventExtensions(person);
+
+person.age = 27;   // 新屬性無法被添加
+console.log(person.age);   // undefined
+
+person.name = 'Tina';   // 仍然可以修改現有屬性
+console.log(person.name);   // Tina
+
+delete person.name;   // 也可以刪除現有屬性
+console.log(person.name);   // undefined
+```
+
+在這個範例中，當對 person 物件使用了 `Object.preventExtensions()` 之後，嘗試添加新屬性 age 會失敗，但仍然可以修改或刪除現有的屬性 name。
