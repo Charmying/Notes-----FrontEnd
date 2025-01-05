@@ -1130,3 +1130,29 @@ console.log(person.name);   // undefined
 ```
 
 在這個範例中，當對 person 物件使用了 `Object.preventExtensions()` 之後，嘗試添加新屬性 age 會失敗，但仍然可以修改或刪除現有的屬性 name。
+
+### 應用場景
+
+- 防止對物件的意外擴展：在開發過程中，當希望某個物件結構保持穩定，不被不小心添加新的屬性時，可以使用 `Object.preventExtensions()` 來鎖定物件的結構。
+
+- 強化物件的完整性：當物件的屬性應該保持固定而不應再增添時，`Object.preventExtensions()` 有助於提高程式的安全性和可靠性。
+
+### 如何檢查物件是否可擴展
+
+可以使用 `Object.isExtensible()` 來檢查一個物件是否還能擴展。
+
+```
+const person = { name: 'Charmy' };
+console.log(Object.isExtensible(person));   // true
+
+Object.preventExtensions(person);
+console.log(Object.isExtensible(person));   // false
+```
+
+### 注意事項
+
+- `Object.preventExtensions()` 只會阻止添加新屬性，並不會影響現有屬性的修改或刪除行為。
+
+- 一旦使用了 `Object.preventExtensions()` 就無法撤銷這個操作。物件將永遠無法擴展。
+
+- `Object.preventExtensions()` 不會影響物件的原型鏈，因此物件仍然可以透過原型繼承屬性和方法。
