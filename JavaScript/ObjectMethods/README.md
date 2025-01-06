@@ -1156,3 +1156,15 @@ console.log(Object.isExtensible(person));   // false
 - 一旦使用了 `Object.preventExtensions()` 就無法撤銷這個操作。物件將永遠無法擴展。
 
 - `Object.preventExtensions()` 不會影響物件的原型鏈，因此物件仍然可以透過原型繼承屬性和方法。
+
+### 與 `Object.seal()` 和 `Object.freeze()` 的區別
+
+- `Object.preventExtensions()` 只阻止新增屬性，但允許修改或刪除現有屬性。
+
+- `Object.seal()` 不僅阻止新增屬性，也不允許刪除屬性，但仍允許修改屬性值。
+
+- `Object.freeze()` 則是最嚴格的，既阻止新增屬性，也阻止修改和刪除屬性，完全凍結物件。
+
+### 總結
+
+`Object.preventExtensions()` 是一個有助於防止物件結構發生變化的工具。當希望物件保持原有的屬性並阻止新增屬性時，可以使用這個方法來確保物件的穩定性和完整性。
