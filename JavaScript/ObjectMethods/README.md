@@ -1168,3 +1168,19 @@ console.log(Object.isExtensible(person));   // false
 ### 總結
 
 `Object.preventExtensions()` 是一個有助於防止物件結構發生變化的工具。當希望物件保持原有的屬性並阻止新增屬性時，可以使用這個方法來確保物件的穩定性和完整性。
+
+<br />
+
+## `Object.seal()`
+
+`Object.seal()` 是一個用來封閉物件的靜態方法。當對一個物件使用 `Object.seal()` 之後，這個物件就無法再新增或刪除屬性，現有的屬性仍然可以修改，但屬性的可配置性 (configurable) 會被設定為 false，也就是說，無法重新定義屬性或更改其屬性描述符。
+
+基本語法：
+
+```
+Object.seal(obj)
+```
+
+- obj：想要封閉的物件。
+
+這個方法會直接修改傳入的物件，使其無法新增或刪除屬性，並回傳該物件。
