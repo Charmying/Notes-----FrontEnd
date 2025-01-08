@@ -1184,3 +1184,31 @@ Object.seal(obj)
 - obj：想要封閉的物件。
 
 這個方法會直接修改傳入的物件，使其無法新增或刪除屬性，並回傳該物件。
+
+範例：
+
+```
+const car = {
+    brand: 'BMW',
+    model: 'M3'
+};
+
+Object.seal(car);
+
+car.year = 2024;   // 無法新增新屬性
+console.log(car.year);   // undefined
+
+car.model = 'M5';   // 可以修改現有屬性
+console.log(car.model);   // M5
+
+delete car.brand;   // 無法刪除屬性
+console.log(car.brand);   // BMW
+```
+
+在這個範例中，對 car 物件使用了 `Object.seal()`，使其無法新增新屬性 year，也無法刪除屬性 brand。但是，現有的屬性 model 仍然可以被修改。
+
+### 應用場景
+
+- 保護物件結構：當希望物件的屬性保持固定，不被新增或刪除，但仍允許修改現有屬性值時，可以使用 `Object.seal()` 來防止物件結構發生變化。
+
+- 避免意外變更物件的屬性：封閉物件後，可以更有效管理物件狀態，避免因誤操作導致屬性被刪除。
