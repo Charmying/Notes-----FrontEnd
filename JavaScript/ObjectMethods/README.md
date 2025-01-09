@@ -1212,3 +1212,23 @@ console.log(car.brand);   // BMW
 - 保護物件結構：當希望物件的屬性保持固定，不被新增或刪除，但仍允許修改現有屬性值時，可以使用 `Object.seal()` 來防止物件結構發生變化。
 
 - 避免意外變更物件的屬性：封閉物件後，可以更有效管理物件狀態，避免因誤操作導致屬性被刪除。
+
+### 如何檢查物件是否已封閉
+
+你可以使用 `Object.isSealed()` 來檢查一個物件是否已被封閉。
+
+```
+const car = { brand: 'Ferrari' };
+console.log(Object.isSealed(car));   // false
+
+Object.seal(car);
+console.log(Object.isSealed(car));   // true
+```
+
+### 與 `Object.preventExtensions()` 和 `Object.freeze()` 的區別
+
+- `Object.preventExtensions()` 只阻止新增屬性，但允許修改或刪除現有屬性。
+
+- `Object.seal()` 不僅阻止新增屬性，也不允許刪除屬性，但允許修改屬性值。
+
+- `Object.freeze()` 是最嚴格的，既不允許新增、刪除，也不允許修改屬性，完全凍結物件。
