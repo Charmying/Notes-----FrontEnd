@@ -1244,3 +1244,37 @@ console.log(Object.isSealed(car));   // true
 ### 總結
 
 `Object.seal()` 可以保護物件結構，當希望物件不能新增或刪除屬性，但仍允許修改現有屬性的值時，可以有效保持物件的穩定性與安全性。
+
+<br />
+
+## `Object.freeze()`
+
+`Object.freeze()` 是用來凍結物件的方法，讓物件的內容無法被修改。一旦物件被凍結，就無法對它新增、刪除或更改任何的 property，也無法更改這些 property 的值。簡單來說，`Object.freeze()` 讓物件變成不可變 (immutable)。
+
+基本語法：
+
+```
+Object.freeze(obj)
+```
+
+- obj：想要凍結的物件。
+
+範例：
+
+```
+const person = {
+    name: 'Charmy',
+    age: 27
+};
+
+Object.freeze(person);
+
+person.age = 72;   // 嘗試修改 property 的值
+delete person.name;   // 嘗試刪除 property
+person.city = 'Taipei';   // 嘗試新增 property
+
+console.log(person);   // {name: 'Charmy', age: 27}
+// 上面所有的修改操作都無效
+```
+
+在這個範例中，使用 `Object.freeze(person)` 凍結了 person 物件，因此之後的所有修改操作都無效，包括修改現有的 property、刪除 property 和新增 property。
