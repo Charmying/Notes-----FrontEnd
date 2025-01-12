@@ -1278,3 +1278,36 @@ console.log(person);   // {name: 'Charmy', age: 27}
 ```
 
 在這個範例中，使用 `Object.freeze(person)` 凍結了 person 物件，因此之後的所有修改操作都無效，包括修改現有的 property、刪除 property 和新增 property。
+
+### 注意事項
+
+- `Object.freeze()` 只會凍結物件的第一層。如果物件的 property 是另一個物件 (或陣列)，那麼這個內部物件還是可以被修改的。這稱為淺凍結。
+
+    範例：
+    
+    ```
+    const person = {
+        name: 'Charmy',
+        details: {
+            age: 27
+        }
+    };
+
+    Object.freeze(person);
+
+    person.details.age = 72;   // 這個操作有效
+    console.log(person.details.age);   // 72
+    ```
+
+    - `Object.freeze()` 會回傳被凍結的物件。
+
+### 確認物件是否被凍結
+
+可以使用 `Object.isFrozen()` 方法來檢查一個物件是否已經被凍結。
+
+```
+const person = { name: 'Charmy' };
+
+Object.freeze(person);
+console.log(Object.isFrozen(person));   // true
+```
