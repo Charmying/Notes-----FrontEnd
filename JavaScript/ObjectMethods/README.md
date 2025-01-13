@@ -1311,3 +1311,15 @@ const person = { name: 'Charmy' };
 Object.freeze(person);
 console.log(Object.isFrozen(person));   // true
 ```
+
+### 與 `Object.preventExtensions()` 和 `Object.seal()` 的區別
+
+- `Object.preventExtensions()` 只阻止新增屬性，但允許修改或刪除現有屬性。
+
+- `Object.seal()` 不僅阻止新增屬性，也不允許刪除屬性，但允許修改屬性值。
+
+- `Object.freeze()` 是最嚴格的，既不允許新增、刪除，也不允許修改屬性，完全凍結物件。
+
+### 總結
+
+`Object.freeze()` 在需要確保物件不可被修改的情況下很實用，特別是在處理那些不希望被意外更改的資料，例如：設定檔、常數等。透過凍結物件，可以增加程式的安全性和穩定性。
