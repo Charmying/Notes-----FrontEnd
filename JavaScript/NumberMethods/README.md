@@ -13,3 +13,15 @@ console.log(Number.isNaN(NaN));   // true
 console.log(Number.isNaN("hello"));   // false
 console.log(Number.isNaN(123));   // false
 ```
+
+<br />
+
+## Number.isFinite()
+
+檢查一個數字是否是有限的 (不是 Infinity 或 -Infinity，也不是 NaN)。
+
+```
+console.log(Number.isFinite(123));   // true
+console.log(Number.isFinite(Infinity));   // false
+console.log(Number.isFinite(NaN));   // false
+```
