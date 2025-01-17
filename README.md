@@ -39,3 +39,5 @@
 `2024-12-08` [Cookie、LocalStorage 和 SessionStorage 的差別](https://github.com/Charmying/Notes-FrontEnd/issues/17)
 
 `2024-12-30` [解構賦值](https://github.com/Charmying/Notes-FrontEnd/issues/18)
+
+`2024-01-18` [閉包 (Closure)](https://github.com/Charmying/Notes-FrontEnd/issues/19)
