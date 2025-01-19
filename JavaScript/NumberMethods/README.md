@@ -25,3 +25,14 @@ console.log(Number.isFinite(123));   // true
 console.log(Number.isFinite(Infinity));   // false
 console.log(Number.isFinite(NaN));   // false
 ```
+
+<br />
+
+## Number.isInteger()
+
+檢查一個數字是否為整數。
+
+```
+console.log(Number.isInteger(4));   // true
+console.log(Number.isInteger(4.5));   // false
+```
