@@ -36,3 +36,14 @@ console.log(Number.isFinite(NaN));   // false
 console.log(Number.isInteger(4));   // true
 console.log(Number.isInteger(4.5));   // false
 ```
+
+<br />
+
+## Number.parseFloat()
+
+將字符串解析為浮點數。
+
+```
+console.log(Number.parseFloat("3.14"));   // 3.14
+console.log(Number.parseFloat("3.14abc"));   // 3.14
+```
