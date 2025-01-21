@@ -47,3 +47,15 @@ console.log(Number.isInteger(4.5));   // false
 console.log(Number.parseFloat("3.14"));   // 3.14
 console.log(Number.parseFloat("3.14abc"));   // 3.14
 ```
+
+<br />
+
+## Number.parseInt()
+
+將字符串解析為整數，並可選擇指定基數 (radix)。
+
+```
+console.log(Number.parseInt("123"));   // 123
+console.log(Number.parseInt("123abc"));   // 123
+console.log(Number.parseInt("10", 2));   // 2 (二進位)
+```
