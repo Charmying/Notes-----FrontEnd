@@ -59,3 +59,14 @@ console.log(Number.parseInt("123"));   // 123
 console.log(Number.parseInt("123abc"));   // 123
 console.log(Number.parseInt("10", 2));   // 2 (二進位)
 ```
+
+<br />
+
+## Number.isSafeInteger()
+
+檢查一個數字是否為安全整數。安全整數是指在 JavaScript 中可精確表示的整數範圍內的整數 (在 -(2^53 - 1) 和 2^53 - 1 之間的整數)。
+
+```
+console.log(Number.isSafeInteger(10));   // true
+console.log(Number.isSafeInteger(Math.pow(2, 53)));   // false
+```
