@@ -70,3 +70,13 @@ console.log(Number.parseInt("10", 2));   // 2 (二進位)
 console.log(Number.isSafeInteger(10));   // true
 console.log(Number.isSafeInteger(Math.pow(2, 53)));   // false
 ```
+
+<br />
+
+## Number.MAX_VALUE()
+
+表示 JavaScript 可表示的最大數值。
+
+```
+console.log(Number.MAX_VALUE);   // 1.7976931348623157e+308
+```
