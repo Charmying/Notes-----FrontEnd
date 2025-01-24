@@ -80,3 +80,13 @@ console.log(Number.isSafeInteger(Math.pow(2, 53)));   // false
 ```
 console.log(Number.MAX_VALUE);   // 1.7976931348623157e+308
 ```
+
+<br />
+
+## Number.MIN_VALUE()
+
+表示 JavaScript 可表示的最小正數值 (接近 0，但不是 0)。
+
+```
+console.log(Number.MIN_VALUE);   // 5e-324
+```
