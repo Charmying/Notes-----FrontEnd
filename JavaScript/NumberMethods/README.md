@@ -90,3 +90,13 @@ console.log(Number.MAX_VALUE);   // 1.7976931348623157e+308
 ```
 console.log(Number.MIN_VALUE);   // 5e-324
 ```
+
+<br />
+
+## Number.NEGATIVE_INFINITY
+
+表示負無窮大。
+
+```
+console.log(Number.NEGATIVE_INFINITY);   // -Infinity
+```
