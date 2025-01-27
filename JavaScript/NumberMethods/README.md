@@ -100,3 +100,13 @@ console.log(Number.MIN_VALUE);   // 5e-324
 ```
 console.log(Number.NEGATIVE_INFINITY);   // -Infinity
 ```
+
+<br />
+
+## Number.POSITIVE_INFINITY
+
+表示正無窮大。
+
+```
+console.log(Number.POSITIVE_INFINITY);   // Infinity
+```
