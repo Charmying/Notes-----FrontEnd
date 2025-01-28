@@ -110,3 +110,13 @@ console.log(Number.NEGATIVE_INFINITY);   // -Infinity
 ```
 console.log(Number.POSITIVE_INFINITY);   // Infinity
 ```
+
+<br />
+
+## Number.prototype.toFixed()
+
+將數字格式化為固定小數位數的字符串。
+
+```
+console.log((123.456).toFixed(2));   // 123.46
+```
