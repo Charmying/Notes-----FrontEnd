@@ -120,3 +120,13 @@ console.log(Number.POSITIVE_INFINITY);   // Infinity
 ```
 console.log((123.456).toFixed(2));   // 123.46
 ```
+
+<br />
+
+## Number.prototype.toPrecision()
+
+以指定的精度返回數字的字符串表示。
+
+```
+console.log((123.456).toPrecision(5));   // 123.46
+```
