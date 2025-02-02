@@ -22,3 +22,14 @@ console.log(Math.random());   // 0.123456789
 console.log(Math.round(5.4));   // 5
 console.log(Math.round(5.5));   // 6
 ```
+
+<br />
+
+## Math.floor(x)
+
+將數字向下取整數，也就是取最接近的、比該數字小的整數。
+
+```
+console.log(Math.floor(4.9));   // 4
+console.log(Math.floor(-3.1));   // -4
+```
