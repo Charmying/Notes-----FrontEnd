@@ -11,3 +11,14 @@
 ```
 console.log(Math.random());   // 0.123456789
 ```
+
+<br />
+
+## Math.round(x)
+
+將數字四捨五入到最接近的整數。小數部分小於 0.5 則向下取整數，大於等於 0.5 則向上取整數。
+
+```
+console.log(Math.round(5.4));   // 5
+console.log(Math.round(5.5));   // 6
+```
