@@ -44,3 +44,14 @@ console.log(Math.floor(-3.1));   // -4
 console.log(Math.ceil(4.2));   // 5
 console.log(Math.ceil(-7.8));   // -7
 ```
+
+<br />
+
+## Math.trunc(x)
+
+去除數字的小數部分，僅返回整數部分。
+
+```
+console.log(Math.trunc(4.9));   // 4
+console.log(Math.trunc(-4.9));   // -4
+```
