@@ -33,3 +33,14 @@ console.log(Math.round(5.5));   // 6
 console.log(Math.floor(4.9));   // 4
 console.log(Math.floor(-3.1));   // -4
 ```
+
+<br />
+
+## Math.ceil(x)
+
+將數字向上取整數，也就是取最接近的、比該數字大的整數。
+
+```
+console.log(Math.ceil(4.2));   // 5
+console.log(Math.ceil(-7.8));   // -7
+```
