@@ -55,3 +55,14 @@ console.log(Math.ceil(-7.8));   // -7
 console.log(Math.trunc(4.9));   // 4
 console.log(Math.trunc(-4.9));   // -4
 ```
+
+<br />
+
+## Math.abs(x)
+
+返回一個數的絕對值，也就是該數在數線上距離零的距離，無論是正數還是負數。
+
+```
+console.log(Math.abs(-5));   // 5
+console.log(Math.abs(3.5));   // 3.5
+```
