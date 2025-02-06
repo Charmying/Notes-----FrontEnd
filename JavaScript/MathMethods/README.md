@@ -66,3 +66,17 @@ console.log(Math.trunc(-4.9));   // -4
 console.log(Math.abs(-5));   // 5
 console.log(Math.abs(3.5));   // 3.5
 ```
+
+<br />
+
+## Math.sign(x)
+
+返回一個數字的符號，若是正數返回 1，負數返回 -1，0 返回 0。
+
+```
+console.log(Math.sign(10));   // 1
+console.log(Math.sign(-3));   // -1
+console.log(Math.sign(0));   // 0
+```
+
+<br />
