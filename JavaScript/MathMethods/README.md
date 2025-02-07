@@ -78,5 +78,3 @@ console.log(Math.sign(10));   // 1
 console.log(Math.sign(-3));   // -1
 console.log(Math.sign(0));   // 0
 ```
-
-<br />
