@@ -78,3 +78,14 @@ console.log(Math.sign(10));   // 1
 console.log(Math.sign(-3));   // -1
 console.log(Math.sign(0));   // 0
 ```
+
+<br />
+
+## Math.max(...values)
+
+返回一組數字中的最大值。可以接受多個參數。
+
+```
+console.log(Math.max(1, 5, 3, 9));   // 9
+console.log(Math.max(-1, -5, -3));   // -1
+```
