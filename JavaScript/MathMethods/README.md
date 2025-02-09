@@ -89,3 +89,14 @@ console.log(Math.sign(0));   // 0
 console.log(Math.max(1, 5, 3, 9));   // 9
 console.log(Math.max(-1, -5, -3));   // -1
 ```
+
+<br />
+
+## Math.min(...values)
+
+返回一組數字中的最小值。可以接受多個參數。
+
+```
+console.log(Math.min(1, 5, 3, 9));   // 1
+console.log(Math.min(-1, -5, -3));   // -5
+```
