@@ -100,3 +100,14 @@ console.log(Math.max(-1, -5, -3));   // -1
 console.log(Math.min(1, 5, 3, 9));   // 1
 console.log(Math.min(-1, -5, -3));   // -5
 ```
+
+<br />
+
+## Math.pow(base, exponent)
+
+計算 base 的 exponent 次方，也就是 base 的冪次。
+
+```
+console.log(Math.pow(2, 3));   // 8
+console.log(Math.pow(5, 2));   // 25
+```
