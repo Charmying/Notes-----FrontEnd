@@ -111,3 +111,14 @@ console.log(Math.min(-1, -5, -3));   // -5
 console.log(Math.pow(2, 3));   // 8
 console.log(Math.pow(5, 2));   // 25
 ```
+
+<br />
+
+## Math.sqrt(x)
+
+計算數字的平方根。
+
+```
+console.log(Math.sqrt(9));   // 3
+console.log(Math.sqrt(16));   // 4
+```
