@@ -122,3 +122,14 @@ console.log(Math.pow(5, 2));   // 25
 console.log(Math.sqrt(9));   // 3
 console.log(Math.sqrt(16));   // 4
 ```
+
+<br />
+
+## Math.cbrt(x)
+
+計算數字的立方根。
+
+```
+console.log(Math.cbrt(8));   // 2
+console.log(Math.cbrt(27));   // 3
+```
