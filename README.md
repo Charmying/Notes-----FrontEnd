@@ -41,3 +41,5 @@
 `2024-12-30` [解構賦值](https://github.com/Charmying/Notes-FrontEnd/issues/18)
 
 `2024-01-18` [閉包 (Closure)](https://github.com/Charmying/Notes-FrontEnd/issues/19)
+
+`2024-01-18` [內聚與耦合](https://github.com/Charmying/Notes-FrontEnd/issues/20)
