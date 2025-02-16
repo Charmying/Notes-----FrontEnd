@@ -42,4 +42,4 @@
 
 `2024-01-18` [閉包 (Closure)](https://github.com/Charmying/Notes-FrontEnd/issues/19)
 
-`2024-01-18` [內聚與耦合](https://github.com/Charmying/Notes-FrontEnd/issues/20)
+`2024-02-16` [內聚與耦合](https://github.com/Charmying/Notes-FrontEnd/issues/20)
