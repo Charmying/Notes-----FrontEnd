@@ -45,3 +45,5 @@
 `2024-02-16` [內聚與耦合](https://github.com/Charmying/Notes-FrontEnd/issues/20)
 
 `2024-02-17` [@Input & @Output](https://github.com/Charmying/Notes-FrontEnd/issues/21)
+
+`2024-02-18` [constructor() 建構函式](https://github.com/Charmying/Notes-FrontEnd/issues/22)
