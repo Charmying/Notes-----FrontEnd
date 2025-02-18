@@ -47,3 +47,5 @@
 `2024-02-17` [@Input & @Output](https://github.com/Charmying/Notes-FrontEnd/issues/21)
 
 `2024-02-18` [constructor() 建構函式](https://github.com/Charmying/Notes-FrontEnd/issues/22)
+
+`2024-02-18` [依賴注入 (Dependency Injection)](https://github.com/Charmying/Notes-FrontEnd/issues/23)
