@@ -133,3 +133,14 @@ console.log(Math.sqrt(16));   // 4
 console.log(Math.cbrt(8));   // 2
 console.log(Math.cbrt(27));   // 3
 ```
+
+<br />
+
+## Math.log(x)
+
+計算數字的自然對數 (以 e 為底)。
+
+```
+console.log(Math.log(1));   // 0
+console.log(Math.log(Math.E));   // 1
+```
