@@ -144,3 +144,14 @@ console.log(Math.cbrt(27));   // 3
 console.log(Math.log(1));   // 0
 console.log(Math.log(Math.E));   // 1
 ```
+
+<br />
+
+## Math.log10(x)
+
+計算數字的以 10 為底的對數。
+
+```
+console.log(Math.log10(100));   // 2
+console.log(Math.log10(1000));   // 3
+```
