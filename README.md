@@ -55,3 +55,5 @@
 `2024-02-21` [物件導向 (OOP)](https://github.com/Charmying/Notes-FrontEnd/issues/25)
 
 `2024-04-19` [遞迴 (Recursion)](https://github.com/Charmying/Notes-FrontEnd/issues/26)
+
+`2025-06-10` [Dumb Components vs Smart Components](https://github.com/Charmying/Notes-FrontEnd/issues/27)
