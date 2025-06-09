@@ -40,20 +40,20 @@
 
 `2024-12-30` [解構賦值](https://github.com/Charmying/Notes-FrontEnd/issues/18)
 
-`2024-01-18` [閉包 (Closure)](https://github.com/Charmying/Notes-FrontEnd/issues/19)
+`2025-01-18` [閉包 (Closure)](https://github.com/Charmying/Notes-FrontEnd/issues/19)
 
-`2024-02-16` [內聚與耦合](https://github.com/Charmying/Notes-FrontEnd/issues/20)
+`2025-02-16` [內聚與耦合](https://github.com/Charmying/Notes-FrontEnd/issues/20)
 
-`2024-02-17` [Angular 的 @Input & @Output](https://github.com/Charmying/Notes-FrontEnd/issues/21)
+`2025-02-17` [Angular 的 @Input & @Output](https://github.com/Charmying/Notes-FrontEnd/issues/21)
 
-`2024-02-18` [constructor() 建構函式](https://github.com/Charmying/Notes-FrontEnd/issues/22)
+`2025-02-18` [constructor() 建構函式](https://github.com/Charmying/Notes-FrontEnd/issues/22)
 
-`2024-02-19` [Angular 的 依賴注入 (Dependency Injection)](https://github.com/Charmying/Notes-FrontEnd/issues/23)
+`2025-02-19` [Angular 的 依賴注入 (Dependency Injection)](https://github.com/Charmying/Notes-FrontEnd/issues/23)
 
-`2024-02-20` [Angular 的 @ViewChild](https://github.com/Charmying/Notes-FrontEnd/issues/24)
+`2025-02-20` [Angular 的 @ViewChild](https://github.com/Charmying/Notes-FrontEnd/issues/24)
 
-`2024-02-21` [物件導向 (OOP)](https://github.com/Charmying/Notes-FrontEnd/issues/25)
+`2025-02-21` [物件導向 (OOP)](https://github.com/Charmying/Notes-FrontEnd/issues/25)
 
-`2024-04-19` [遞迴 (Recursion)](https://github.com/Charmying/Notes-FrontEnd/issues/26)
+`2025-04-19` [遞迴 (Recursion)](https://github.com/Charmying/Notes-FrontEnd/issues/26)
 
 `2025-06-10` [Dumb Components vs Smart Components](https://github.com/Charmying/Notes-FrontEnd/issues/27)
