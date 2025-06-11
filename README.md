@@ -58,4 +58,4 @@
 
 `2025-06-10` [Dumb Components vs Smart Components](https://github.com/Charmying/Notes-FrontEnd/issues/27)
 
-`2025-06-11` [什麼是 遞迴 (Recursion)](https://github.com/Charmying/Notes-FrontEnd/issues/28)
+`2025-06-12` [:has() 和 :not() 偽類選擇器](https://github.com/Charmying/Notes-FrontEnd/issues/28)
