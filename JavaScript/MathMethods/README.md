@@ -155,3 +155,14 @@ console.log(Math.log(Math.E));   // 1
 console.log(Math.log10(100));   // 2
 console.log(Math.log10(1000));   // 3
 ```
+
+<br />
+
+## Math.log2(x)
+
+計算數字的以 2 為底的對數。
+
+```
+console.log(Math.log2(8));   // 3
+console.log(Math.log2(16));   // 4
+```
