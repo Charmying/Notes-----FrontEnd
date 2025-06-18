@@ -166,3 +166,14 @@ console.log(Math.log10(1000));   // 3
 console.log(Math.log2(8));   // 3
 console.log(Math.log2(16));   // 4
 ```
+
+<br />
+
+## Math.exp(x)
+
+計算 e 的 x 次方。
+
+```
+console.log(Math.exp(1));   // 2.718281828459045 (即 e)
+console.log(Math.exp(2));   // 7.389056098930649
+```
