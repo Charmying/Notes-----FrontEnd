@@ -177,3 +177,14 @@ console.log(Math.log2(16));   // 4
 console.log(Math.exp(1));   // 2.718281828459045 (即 e)
 console.log(Math.exp(2));   // 7.389056098930649
 ```
+
+<br />
+
+## Math.sin(x)
+
+計算數字 (以弧度表示) 的正弦值。
+
+```
+console.log(Math.sin(Math.PI / 2));   // 1
+console.log(Math.sin(0));   // 0
+```
