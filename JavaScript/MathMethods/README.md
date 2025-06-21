@@ -188,3 +188,14 @@ console.log(Math.exp(2));   // 7.389056098930649
 console.log(Math.sin(Math.PI / 2));   // 1
 console.log(Math.sin(0));   // 0
 ```
+
+<br />
+
+## Math.cos(x)
+
+計算數字 (以弧度表示) 的餘弦值。
+
+```
+console.log(Math.cos(Math.PI));   // -1
+console.log(Math.cos(0));   // 1
+```
