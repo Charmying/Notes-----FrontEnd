@@ -63,3 +63,5 @@
 `2025-06-16` [MVC 與 MVVM](https://github.com/Charmying/Notes-FrontEnd/issues/29)
 
 `2025-06-17` [CSR 與 SSR](https://github.com/Charmying/Notes-FrontEnd/issues/30)
+
+`2025-06-22` [前端渲染方式](https://github.com/Charmying/Notes-FrontEnd/issues/31)
