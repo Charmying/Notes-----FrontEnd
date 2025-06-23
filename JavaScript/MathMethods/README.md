@@ -199,3 +199,15 @@ console.log(Math.sin(0));   // 0
 console.log(Math.cos(Math.PI));   // -1
 console.log(Math.cos(0));   // 1
 ```
+
+<br />
+
+## Math.tan(x)
+
+計算數字 (以弧度表示) 的正切值。
+
+```
+console.log(Math.tan(Math.PI / 4));   // 0.9999999999999999
+console.log(Math.tan(0));   // 0
+```
+
