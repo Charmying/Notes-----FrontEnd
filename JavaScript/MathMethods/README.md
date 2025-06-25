@@ -221,3 +221,14 @@ console.log(Math.tan(0));   // 0
 console.log(Math.asin(1));   // 1.5707963267948966 (即 π/2)
 console.log(Math.asin(0));   // 0
 ```
+
+<br />
+
+## Math.acos(x)
+
+計算數字的反餘弦值，結果以弧度表示，輸入的值必須在 -1 到 1 之間。
+
+```
+console.log(Math.acos(1));   // 0
+console.log(Math.acos(0));   // 1.5707963267948966 (即 π/2)
+```
