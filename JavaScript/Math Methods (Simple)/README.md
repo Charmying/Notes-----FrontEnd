@@ -243,4 +243,3 @@ console.log(Math.acos(0));   // 1.5707963267948966 (即 π/2)
 console.log(Math.atan(1));   // 0.7853981633974483
 console.log(Math.atan(0));   // 0
 ```
-
