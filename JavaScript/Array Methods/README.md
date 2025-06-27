@@ -456,4 +456,3 @@ delete arr[1];
 
 console.log(arr);   // [1, empty, 3]
 ```
-
