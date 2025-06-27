@@ -361,4 +361,3 @@ let str = "QQQ";
 console.log(str.padEnd(5, '*'));   // QQQ**
 console.log(str.padEnd(8, 'abc'));   // QQQabcab
 ```
-
