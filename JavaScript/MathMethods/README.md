@@ -232,3 +232,14 @@ console.log(Math.asin(0));   // 0
 console.log(Math.acos(1));   // 0
 console.log(Math.acos(0));   // 1.5707963267948966 (即 π/2)
 ```
+
+<br />
+
+## Math.atan(x)
+
+計算數字的反正切值，結果以弧度表示。
+
+```
+console.log(Math.atan(1));   // 0.7853981633974483
+console.log(Math.atan(0));   // 0
+```
