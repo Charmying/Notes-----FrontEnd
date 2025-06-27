@@ -515,4 +515,3 @@ Angular 使用 `fileReplacements` 機制來根據環境自動替換 `environment
     - `CanActivate` 介面：用於檢查是否允許進入特定路由。
     
     - `canActivate` 方法：如果用戶未認證，重定向至登錄頁面，返回 false 表示不允許導航。
-
