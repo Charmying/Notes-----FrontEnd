@@ -243,3 +243,14 @@ console.log(Math.acos(0));   // 1.5707963267948966 (即 π/2)
 console.log(Math.atan(1));   // 0.7853981633974483
 console.log(Math.atan(0));   // 0
 ```
+
+<br />
+
+## Math.atan2(y, x)
+
+計算 y/x 的反正切值，返回的值以弧度表示。因為有兩個參數，能確定結果位於哪個象限。
+
+```
+console.log(Math.atan2(1, 1));   // 0.7853981633974483 (π/4)
+console.log(Math.atan2(1, -1));   // 2.356194490192345 (3π/4)
+```
