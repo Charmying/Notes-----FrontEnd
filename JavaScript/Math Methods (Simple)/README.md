@@ -254,3 +254,15 @@ console.log(Math.atan(0));   // 0
 console.log(Math.atan2(1, 1));   // 0.7853981633974483 (π/4)
 console.log(Math.atan2(1, -1));   // 2.356194490192345 (3π/4)
 ```
+
+<br />
+
+## Math.hypot(...values)
+
+計算一組數字的平方和的平方根。
+
+```
+console.log(Math.hypot(3, 4));   // 5
+console.log(Math.hypot(5, 12));   // 13
+console.log(Math.hypot(1, 2, 3, 4));   // 5.477225575051661
+```
