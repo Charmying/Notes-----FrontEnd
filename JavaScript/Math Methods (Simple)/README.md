@@ -266,3 +266,14 @@ console.log(Math.hypot(3, 4));   // 5
 console.log(Math.hypot(5, 12));   // 13
 console.log(Math.hypot(1, 2, 3, 4));   // 5.477225575051661
 ```
+
+<br />
+
+## Math.clz32(x)
+
+計算 32 位元無符號整數的前導零的數量。
+
+```
+console.log(Math.clz32(1));   // 31
+console.log(Math.clz32(16));   // 27
+```
