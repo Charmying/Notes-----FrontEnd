@@ -277,3 +277,14 @@ console.log(Math.hypot(1, 2, 3, 4));   // 5.477225575051661
 console.log(Math.clz32(1));   // 31
 console.log(Math.clz32(16));   // 27
 ```
+
+<br />
+
+## Math.imul(a, b)
+
+進行 32 位元整數相乘，返回結果的低 32 位。
+
+```
+console.log(Math.imul(2, 4));   // 8
+console.log(Math.imul(-1, 8));   // -8
+```
