@@ -288,3 +288,14 @@ console.log(Math.clz32(16));   // 27
 console.log(Math.imul(2, 4));   // 8
 console.log(Math.imul(-1, 8));   // -8
 ```
+
+<br />
+
+## Math.fround(x)
+
+返回最接近的 32 位元單精度浮點數表示。
+
+```
+console.log(Math.fround(5.5));   // 5.5
+console.log(Math.fround(0.1));   // 0.10000000149011612
+```
