@@ -299,3 +299,12 @@ console.log(Math.imul(-1, 8));   // -8
 console.log(Math.fround(5.5));   // 5.5
 console.log(Math.fround(0.1));   // 0.10000000149011612
 ```
+
+## Math.expm1(x)
+
+計算 `e^x - 1` 的值，精度比 `Math.exp(x) - 1` 更高。
+
+```
+console.log(Math.expm1(1));   // 1.718281828459045
+console.log(Math.expm1(0));   // 0
+```
